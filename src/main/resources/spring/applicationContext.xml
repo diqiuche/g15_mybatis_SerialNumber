@@ -11,6 +11,7 @@
 
 	
 	<context:component-scan base-package="com.git.service" />
+	
 	<task:annotation-driven />
-	<bean id="singer" class="com.git.controller.timer.ClearSerialNum"/>
+	<bean class="com.git.timer.ClearSerialNum"/>
 </beans>

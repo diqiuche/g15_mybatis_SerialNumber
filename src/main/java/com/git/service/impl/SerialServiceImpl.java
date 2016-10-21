@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.git.domain.SerialEntity;
-import com.git.mapper.DemoMapper;
 import com.git.mapper.SerialMapper;
 import com.git.service.SerialService;
 @Service
@@ -15,8 +14,6 @@ public class SerialServiceImpl implements SerialService{
 	private static final String START="00000";
 	@Autowired
 	private SerialMapper serialMapper;
-	@Autowired
-	private DemoMapper demoMapper;
 	
 	@Override
 	public synchronized String nextNum() {

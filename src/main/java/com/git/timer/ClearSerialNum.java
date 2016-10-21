@@ -5,7 +5,6 @@ import java.util.Date;
 import org.apache.commons.lang3.time.DateFormatUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Controller;
 
 import com.git.service.SerialService;
 

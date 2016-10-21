@@ -11,7 +11,7 @@ import com.git.service.SerialService;
 @Service
 public class SerialServiceImpl implements SerialService{
 	private static final String STR_FORMAT = "00000";
-	private static final String START="00000";
+	private static final String START=new DecimalFormat(STR_FORMAT).format(0);
 	@Autowired
 	private SerialMapper serialMapper;
 	

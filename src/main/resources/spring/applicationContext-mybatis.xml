@@ -12,7 +12,7 @@
        					   http://www.springframework.org/schema/aop/spring-aop.xsd
        					   http://www.springframework.org/schema/context 
        					   http://www.springframework.org/schema/context/spring-context.xsd">
-
+	<context:component-scan base-package="com.git.mapper" />
 <!-- 加载配置文件-->
 	<bean
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -66,6 +66,8 @@
 		<tx:attributes>
 			<tx:method name="refresh"/>
 			<tx:method name="update" />
+			<tx:method name="nextNum" />
+			<tx:method name="clearTable" />
 			<tx:method name="*" read-only="true"/>
 		</tx:attributes>
 	</tx:advice>
@@ -77,5 +79,7 @@
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="com.git.mapper" />
 	</bean>
-
+	<bean id="sqlMapper" class="com.github.abel533.sql.SqlMapper" scope="prototype">
+	  <constructor-arg ref="sqlSessionFactory"/>
+	</bean>
 </beans>

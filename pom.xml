@@ -141,7 +141,7 @@
     </dependencies>
     
 	<build>
-	 	<plugins>
+		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -152,15 +152,15 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
-			 		<plugin>
+			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<configuration>
-				    <!--端口和虚拟目录-->
+					<!--端口和虚拟目录 -->
 					<port>80</port>
 					<path>/</path>
 				</configuration>
 			</plugin>
-	 	</plugins>
-	 </build>
+		</plugins>
+	</build>
 </project>
